@@ -37,7 +37,9 @@ class GoogleSearchTest extends FeatureSpec with GivenWhenThen with Matchers with
 
       When("I Search for Selenium")
       googleSearchPage.searchFor("Selenium")
-
+      googleSearchPage.searchFor("hello")
+      googleSearchPage.searchFor("scala")
+      googleSearchPage.searchFor("world")
       Then("Search results should contain Selenium Result")
       assert(searchResultsPage.isLnkSeleniumPresent())
     }
